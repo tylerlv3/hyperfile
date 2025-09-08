@@ -10,3 +10,12 @@
 /env.bak8/
 /env.bak9/
 /env.bak10/
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyzw
+*.pyzwz

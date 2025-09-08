@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 class FileScanner:
     def __init__(self):
        self.max_file_size = settings.get_max_file_size()
-       self.allowed_extensions = settings.get_file_extensions()
+       self.allowed_extensions = set(settings.get_file_extensions())
        self.follow_symlinks = settings.should_follow_symlinks()
 
     def scan_files(self) -> Iterator[Path]:

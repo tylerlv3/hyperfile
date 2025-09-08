@@ -6,7 +6,7 @@ from typing import Dict, List, Any
 class Settings:
     def __init__(self, config_path: str = None):
         self.config_path = config_path or self._get_default_config_path()
-        self config = self._load_config()
+        self.config = self._load_config()
 
     def _get_default_config_path(self) -> Path:
         current_dir = Path(__file__).parent.parent.parent
@@ -21,10 +21,11 @@ class Settings:
         except yaml.YAMLError as e:
             raise ValueError(f"Error parsing config file: {e}")
 
-    def get_search_directories(self) -> List[str]:
-        directories = self.config.get('search_directories', [])
-        for dir_path in directories:
-            expanded_path = os.path.expanduser(dir_path)
+    def get_search_directories(self) -> List[Path]:
+        raw_directories = self.config.get('search_directories', [])
+        directories = []
+        for dir_path in raw_directories:
+            expanded_path = Path(dir_path).expanduser()
             if expanded_path.exists() and expanded_path.is_dir():
                 directories.append(expanded_path)
         return directories
@@ -42,7 +43,7 @@ class Settings:
         max_size_mb = self.config.get('search', {}).get('max_file_size_mb', 50)
         return max_size_mb * 1024 * 1024
 
-   def should_index_content(self) -> bool:
+    def should_index_content(self) -> bool:
         return self.config.get('search', {}).get('index_content', True)
 
     def should_follow_symlinks(self) -> bool:
