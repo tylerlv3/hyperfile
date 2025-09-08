@@ -1,0 +1,9 @@
+click
+pyyaml
+pathlib2
+chardet
+python-magic
+
+pypdf2
+python-docx
+pytest
