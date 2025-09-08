@@ -1,0 +1,69 @@
+search_directories:
+  - "~/Documents"
+  - "~/Downloads"
+  - "~/Desktop"
+  - "~/Pictures"
+  - "~/Music"
+  - "~/Videos"
+  - "~/Public"
+  - "~/Templates"
+  - "~/Projects"
+  - "~/Code"
+
+file_types:
+  documents:
+    - "*.txt"
+    - "*.pdf"
+    - "*.docx"
+    - "*.doc"
+    - "*.xls"
+    - "*.xlsx"
+    - "*.ppt"
+    - "*.pptx"
+  code:
+    - "*.py"
+    - "*.java"
+    - "*.cpp"
+    - "*.h"
+    - "*.hpp"
+    - "*.c"
+    - "*.h"
+    - "*.hpp"
+    - "*.c"
+    - "*.h"
+    - "*.hpp"
+    - "*.c"
+    - "*.h"
+    - "*.hpp"
+    - "*.c"
+    - "*.h"
+    - "*.hpp"
+  images:
+    - "*.jpg"
+    - "*.jpeg"
+    - "*.png"
+    - "*.gif"
+    - "*.bmp"
+    - "*.tiff"
+    - "*.ico"
+    - "*.webp"
+  archives:
+    - "*.zip"
+    - "*.tar"
+    - "*.gz"
+    - "*.bz2"
+    - "*.rar"
+    - "*.7z"
+    - "*.iso"
+    - "*.dmg"
+    - "*.pkg"
+
+
+ search:
+  max_file_size_mb: 50
+  index_content: true
+  follow_symlinks: true
+
+indexing:
+  auto_refresh_hours: 24
+  batch_size: 100
