@@ -53,10 +53,10 @@ file_types:
     - ".pkg"
 
 search:
-  max_file_size_mb: 50
+  max_file_size_mb: 500
   index_content: true
-  follow_symlinks: true
+  follow_symlinks: false
 
 indexing:
   auto_refresh_hours: 24
-  batch_size: 100
+  batch_size: 1000

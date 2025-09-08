@@ -40,7 +40,7 @@ def main():
             
             file_count += 1
             
-            if file_count >= 20:
+            if file_count >= 5000:
                 print(f"Stopping at {file_count} files for testing")
                 break
         
